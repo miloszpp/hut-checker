@@ -9,11 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.7",
+    "node-notifier": "^10.0.1",
     "puppeteer": "^20.1.2"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.6.1",
     "@types/puppeteer": "^7.0.4"
   }
 }

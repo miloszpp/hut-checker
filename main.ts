@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer";
 
+const notifier = require("node-notifier");
+
 async function checkHut({
   hutId,
   daysToBook,
@@ -34,9 +36,10 @@ async function checkHut({
     console.log(dayNumbers);
 
     if (dayNumbers.every((number) => number >= minAvailability)) {
-      console.log("SUCCESS");
-    } else {
-      console.log("FAIL");
+      notifier.notify({
+        message: `Places found for hut ${hutId}!`,
+        timeout: 99999999999,
+      });
     }
 
     await browser.close();
